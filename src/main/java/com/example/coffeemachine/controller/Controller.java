@@ -34,6 +34,11 @@ public class Controller {
             coffeeMachineGlobal.insertBill();
         });
 
+        cappuccinoButton.setOnAction(event -> {
+            cappuccinoButton.getScene().getWindow().hide();
+            coffeeMachineGlobal.pressButton();
+        });
+
     }
 
 }

@@ -1,20 +1,13 @@
 package com.example.coffeemachine.service;
 
-import com.example.coffeemachine.service.CoffeeMachine;
-import com.example.coffeemachine.service.State;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class HasBillState implements State {
 
     CoffeeMachine coffeeMachine;
 
     public HasBillState(CoffeeMachine coffeeMachine) {
-
+        this.coffeeMachine = coffeeMachine;
     }
 
     @Override
@@ -29,24 +22,17 @@ public class HasBillState implements State {
 
     @Override
     public void pressButton() {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/com/example/coffeemachine/cappuccino.fxml"));
-
-        try {
-            loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Parent root = loader.getRoot();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.showAndWait();
+        coffeeMachine.toDisplay("/com/example/coffeemachine/making-coffee.fxml");
     }
 
     @Override
     public void pourСoffee() {
-
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        coffeeMachine.toDisplay("/com/example/coffeemachine/coffee-is-ready.fxml");
     }
 
     @Override

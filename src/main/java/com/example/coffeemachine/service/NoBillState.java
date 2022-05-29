@@ -10,7 +10,8 @@ public class NoBillState implements State {
 
     @Override
     public void insertBill() {
-        coffeeMachine.toDisplay("/com/example/coffeemachine/cappuccino.fxml");
+        coffeeMachine.toDisplay("/com/example/coffeemachine/coffee-selection.fxml");
+        coffeeMachine.setState(coffeeMachine.getHasBillState());
     }
 
     @Override
