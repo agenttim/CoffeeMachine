@@ -16,11 +16,12 @@ public class NoBillState implements State {
 
     @Override
     public void ejectBill() {
-
+        coffeeMachine.toDisplay("/com/example/coffeemachine/bill-return-error.fxml");
     }
 
     @Override
     public void pressButton() {
+        coffeeMachine.toDisplay("/com/example/coffeemachine/making-coffee-error.fxml");
 
     }
 

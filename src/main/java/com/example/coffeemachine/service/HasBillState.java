@@ -1,5 +1,8 @@
 package com.example.coffeemachine.service;
 
+import javafx.animation.PauseTransition;
+import javafx.util.Duration;
+
 import java.util.concurrent.TimeUnit;
 
 public class HasBillState implements State {
@@ -17,7 +20,8 @@ public class HasBillState implements State {
 
     @Override
     public void ejectBill() {
-
+        coffeeMachine.toDisplay("/com/example/coffeemachine/bill-return.fxml");
+        coffeeMachine.setState(coffeeMachine.getNoBillState());
     }
 
     @Override
@@ -27,13 +31,10 @@ public class HasBillState implements State {
 
     @Override
     public void pourСoffee() {
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         coffeeMachine.toDisplay("/com/example/coffeemachine/coffee-is-ready.fxml");
+        coffeeMachine.setState(coffeeMachine.getState());
     }
+
 
     @Override
     public void refill() {
