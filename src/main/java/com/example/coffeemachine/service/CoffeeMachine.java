@@ -39,7 +39,10 @@ public class CoffeeMachine {
 
     public void pressButton() {
         state.pressButton();
-        state.pourСoffee();
+    }
+
+    public void takeCoffe() {
+        state.takeСoffee();
     }
 
     void releaseCoffee() {

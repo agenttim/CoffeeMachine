@@ -26,7 +26,7 @@ public class NoBillState implements State {
     }
 
     @Override
-    public void pourСoffee() {
+    public void takeСoffee() {
 
     }
 

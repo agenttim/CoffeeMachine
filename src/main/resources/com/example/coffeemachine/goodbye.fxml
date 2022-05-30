@@ -37,7 +37,7 @@
             <Font name="Arial" size="36.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="141.0" prefHeight="116.0" prefWidth="586.0" text="Ваш кофе готов,&#10;можете забрать его" textAlignment="CENTER" textFill="#10c6cd">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="140.0" prefHeight="116.0" prefWidth="508.0" text="Спасибо, что воспользовались&#10;нашим автоматом. До свидания!" textAlignment="CENTER" textFill="#10c6cd">
          <font>
             <Font name="Arial" size="30.0" />
          </font>

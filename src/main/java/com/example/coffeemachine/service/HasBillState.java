@@ -30,9 +30,8 @@ public class HasBillState implements State {
     }
 
     @Override
-    public void pourСoffee() {
-        coffeeMachine.toDisplay("/com/example/coffeemachine/coffee-is-ready.fxml");
-        coffeeMachine.setState(coffeeMachine.getState());
+    public void takeСoffee() {
+        coffeeMachine.toDisplay("/com/example/coffeemachine/goodbye.fxml");
     }
 
 
