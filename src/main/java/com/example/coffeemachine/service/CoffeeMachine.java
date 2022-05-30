@@ -25,7 +25,7 @@ public class CoffeeMachine {
         noBillState = new NoBillState(this);
         hasBillState = new HasBillState(this);
 
-        count = 100;
+        count = 3;
         state = noBillState;
     }
 
@@ -46,7 +46,6 @@ public class CoffeeMachine {
     }
 
     void releaseCoffee() {
-        //System.out.println("A gumball comes rolling out the slot...");
         if (count > 0) {
             count = count - 1;
         }

@@ -32,6 +32,13 @@ public class HasBillState implements State {
     @Override
     public void takeСoffee() {
         coffeeMachine.toDisplay("/com/example/coffeemachine/goodbye.fxml");
+        coffeeMachine.releaseCoffee();
+        if (coffeeMachine.getCount() > 0) {
+            coffeeMachine.setState(coffeeMachine.getNoBillState());
+        } else {
+            System.out.println("Oops, out of gumballs!");
+            coffeeMachine.setState(coffeeMachine.getSoldOutState());
+        }
     }
 
 
