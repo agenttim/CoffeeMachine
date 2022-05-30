@@ -44,7 +44,10 @@ public class Controller {
             coffeeMachineGlobal.ejectBill();
         });
 
+        refillButton.setOnAction(event -> {
+            refillButton.getScene().getWindow().hide();
+            coffeeMachineGlobal.refill();
+        });
     }
-
 }
 

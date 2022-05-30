@@ -33,6 +33,7 @@ public class SoldOutState implements State {
 
     @Override
     public void refill() {
-
+        coffeeMachine.toDisplay("/com/example/coffeemachine/hello-view.fxml");
+        coffeeMachine.setState(coffeeMachine.getNoBillState());
     }
 }

@@ -50,6 +50,9 @@ public class ControllerMakingCoffee {
             cappuccinoReadyButton.getScene().getWindow().hide();
             coffeeMachineGlobal.takeCoffe();
         });
+        refillButton.setOnAction(event -> {
+            refillButton.getScene().getWindow().hide();
+            coffeeMachineGlobal.refill();
+        });
     }
-
 }
