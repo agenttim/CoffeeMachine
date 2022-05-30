@@ -32,6 +32,6 @@ public class NoBillState implements State {
 
     @Override
     public void refill() {
-
+        coffeeMachine.toDisplay("/com/example/coffeemachine/machine-is-full.fxml");
     }
 }

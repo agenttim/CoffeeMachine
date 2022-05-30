@@ -21,7 +21,6 @@ public class CoffeeMachine {
 
     public CoffeeMachine() {
         soldOutState = new SoldOutState(this);
-        soldState = new SoldState(this);
         noBillState = new NoBillState(this);
         hasBillState = new HasBillState(this);
 

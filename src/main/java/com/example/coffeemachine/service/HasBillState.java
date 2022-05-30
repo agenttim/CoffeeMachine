@@ -15,7 +15,7 @@ public class HasBillState implements State {
 
     @Override
     public void insertBill() {
-
+        coffeeMachine.toDisplay("/com/example/coffeemachine/bill-insert-error.fxml");
     }
 
     @Override
@@ -44,7 +44,7 @@ public class HasBillState implements State {
 
     @Override
     public void refill() {
-
+        coffeeMachine.toDisplay("/com/example/coffeemachine/machine-is-full.fxml");
     }
 
 
